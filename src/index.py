@@ -9,18 +9,18 @@ import time
 
 s = requests.Session()
 
-# payload = {'username': 'nada122@gmail.com', 'password': 'javi2602'}
-# url = 'https://w3.gamehost.cl/dologin.php'
+payload = {'username': 'fponcecanales@gmail.com', 'password': 'besobeso123'}
+url = 'https://w3.gamehost.cl/dologin.php'
 
-# r = s.post(url, data=payload)
-# # r =requests.post(url, data=payload)
-# inicio = BeautifulSoup(r.content, 'html.parser')
+r = s.post(url, data=payload)
+# r =requests.post(url, data=payload)
+inicio = BeautifulSoup(r.content, 'html.parser')
 
-# entrada = inicio.find(menuitemname="Client Details")
-# if entrada == None:
-#     print("Pass incorrecta")
-# else:
-#     print("dentrop")
+entrada = inicio.find(menuitemname="Client Details")
+if entrada == None:
+    print("Pass incorrecta")
+else:
+    print("dentrop")
 
 
 # ---------------------------------------------------------------------------------------------
@@ -108,35 +108,104 @@ s = requests.Session()
 # Restablecimiento de contrasena ( sin log in)
 
 
-resetUrl = 'https://w3.gamehost.cl/pwreset.php'
-reset = s.get(resetUrl)
-# TOKEN
-inicio = BeautifulSoup(reset.content, 'html.parser')
-token = inicio.find('script')
-accessToken = re.search('var csrfToken = (?P<token>.*)', token.string)
-print(token)
-token = accessToken.group('token')
-characters = ",'"
+# resetUrl = 'https://w3.gamehost.cl/pwreset.php'
+# reset = s.get(resetUrl)
+# # TOKEN
+# inicio = BeautifulSoup(reset.content, 'html.parser')
+# token = inicio.find('script')
+# accessToken = re.search('var csrfToken = (?P<token>.*)', token.string)
+# print(token)
+# token = accessToken.group('token')
+# characters = ",'"
 
-for x in range(len(characters)):
-    token = token.replace(characters[x],"")
+# for x in range(len(characters)):
+#     token = token.replace(characters[x],"")
 
 
-print(token)
-payload = {
-    'token':token,
-    'action':'reset',
-    'email':'fponcecanales@gmail.com'
-}
-reset = s.post(resetUrl, payload)
-payload = {
-    'token':token,
-    'key':"",
-    'newpw':'javi2602',
-    'confirmpw':'javi2602',
-    'submit':'Guardar+Cambios'
-}
-resetUrl = 'https://w3.gamehost.cl/pwreset.php?action=pwreset'
-reset = s.post(resetUrl, payload)
+# print(token)
+# payload = {
+#     'token':token,
+#     'action':'reset',
+#     'email':'fponcecanales@gmail.com'
+# }
+# reset = s.post(resetUrl, payload)
+# payload = {
+#     'token':token,
+#     'key':"",
+#     'newpw':'javi2602',
+#     'confirmpw':'javi2602',
+#     'submit':'Guardar+Cambios'
+# }
+# resetUrl = 'https://w3.gamehost.cl/pwreset.php?action=pwreset'
+# reset = s.post(resetUrl, payload)
 
-print(reset.text)
+# print(reset.text)
+
+
+
+# Restablecimiento de contrasena ( CON log in) 
+
+# resetUrl = 'https://w3.gamehost.cl/clientarea.php?action=changepw'
+# reset = s.get(resetUrl)
+
+# # TOKEN
+# inicio = BeautifulSoup(reset.content, 'html.parser')
+# token = inicio.find('script')
+# accessToken = re.search('var csrfToken = (?P<token>.*)', token.string)
+# print(token)
+# token = accessToken.group('token')
+# characters = ",'"
+
+# for x in range(len(characters)):
+#     token = token.replace(characters[x],"")
+
+
+# print(token)
+
+# payload = {
+#     'token':token,
+#     'submit':'true',
+#     'existingpw':'hola1234',
+#     'newpw':'javi2602',
+#     'confirmpw':'javi2602'
+# }
+
+# reset = s.post(resetUrl, payload)
+
+# print(reset.text)
+
+
+
+
+# resetUrl = 'https://w3.gamehost.cl/pwreset.php'
+# reset = s.get(resetUrl)
+# # TOKEN
+# inicio = BeautifulSoup(reset.content, 'html.parser')
+# token = inicio.find('script')
+# accessToken = re.search('var csrfToken = (?P<token>.*)', token.string)
+# print(token)
+# token = accessToken.group('token')
+# characters = ",'"
+
+# for x in range(len(characters)):
+#     token = token.replace(characters[x],"")
+
+
+# print(token)
+# payload = {
+#     'token':token,
+#     'action':'reset',
+#     'email':'fponcecanales@gmail.com'
+# }
+# reset = s.post(resetUrl, payload)
+# payload = {
+#     'token':token,
+#     'key':"",
+#     'newpw':'besobeso123',
+#     'confirmpw':'besobeso123',
+#     'submit':'Guardar+Cambios'
+# }
+# resetUrl = 'https://w3.gamehost.cl/pwreset.php?action=pwreset'
+# reset = s.post(resetUrl, payload)
+
+# print(reset.text)
