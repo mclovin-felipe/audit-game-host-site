@@ -1,0 +1,463 @@
+    <!-- Styling -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Raleway:400,700" rel="stylesheet">
+    <link href="/templates/six/css/all.min.css?v=b4c444" rel="stylesheet">
+    <link href="/assets/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/templates/six/css/custom.css" rel="stylesheet">
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript">
+        var csrfToken = '06ed7272c3812cc2608be02f96d6e089ab78f2de',
+            markdownGuide = 'Guía de Markdown',
+            locale = 'en',
+            saved = 'guardado',
+            saving = 'guardando',
+            whmcsBaseUrl = "",
+            requiredText = 'Necesario',
+            recaptchaSiteKey = "";
+    </script>
+    <script src="/templates/six/js/scripts.min.js?v=b4c444"></script>
+    
+    
+    
+    
+    
+    </head>
+    
+    <body data-phone-cc-input="1">
+    
+    
+    
+    <section id="header">
+        <div class="container">
+            <ul class="top-nav">
+                                            <li>
+                        <a href="#" data-toggle="popover" id="accountNotifications" data-placement="bottom">
+                            Notificaciones
+                                                    <b class="caret"></b>
+                        </a>
+                        <div id="accountNotificationsContent" class="hidden">
+                            <ul class="client-alerts">
+                                                        <li class="none">
+                                    No tiene notificaciones en este momento.
+                                </li>
+                                                    </ul>
+                        </div>
+                    </li>
+                    <li class="primary-action">
+                        <a href="/logout.php" class="btn">
+                            Salir
+                        </a>
+                    </li>
+                                    </ul>
+    
+                        <a href="/index.php" class="logo logo-text">Gamehost</a>
+    
+        </div>
+    </section>
+    
+    <section id="main-menu">
+    
+        <nav id="nav" class="navbar navbar-default navbar-main" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="primary-nav">
+    
+                    <ul class="nav navbar-nav">
+    
+                            <li menuItemName="Home" class="" id="Primary_Navbar-Home">
+            <a href="/clientarea.php">
+                            Área de Clientes
+                                    </a>
+                </li>
+        <li menuItemName="Services" class="dropdown" id="Primary_Navbar-Services">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Servicios
+                            &nbsp;<b class="caret"></b>        </a>
+                        <ul class="dropdown-menu">
+                                <li menuItemName="My Services" id="Primary_Navbar-Services-My_Services">
+                        <a href="/clientarea.php?action=services">
+                                                    Mis Servicios
+                                                </a>
+                    </li>
+                                <li menuItemName="Services Divider" class="nav-divider" id="Primary_Navbar-Services-Services_Divider">
+                        <a href="">
+                                                    -----
+                                                </a>
+                    </li>
+                                <li menuItemName="Order New Services" id="Primary_Navbar-Services-Order_New_Services">
+                        <a href="/cart.php">
+                                                    Comprar Servicios
+                                                </a>
+                    </li>
+                                <li menuItemName="View Available Addons" id="Primary_Navbar-Services-View_Available_Addons">
+                        <a href="/cart.php?gid=addons">
+                                                    Comprar Complementos
+                                                </a>
+                    </li>
+                            </ul>
+                </li>
+        <li menuItemName="Billing" class="dropdown" id="Primary_Navbar-Billing">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Facturación
+                            &nbsp;<b class="caret"></b>        </a>
+                        <ul class="dropdown-menu">
+                                <li menuItemName="My Invoices" id="Primary_Navbar-Billing-My_Invoices">
+                        <a href="/clientarea.php?action=invoices">
+                                                    Mis Facturas
+                                                </a>
+                    </li>
+                                <li menuItemName="My Quotes" id="Primary_Navbar-Billing-My_Quotes">
+                        <a href="/clientarea.php?action=quotes">
+                                                    Mis Presupuestos
+                                                </a>
+                    </li>
+                                <li menuItemName="Billing Divider" class="nav-divider" id="Primary_Navbar-Billing-Billing_Divider">
+                        <a href="">
+                                                    -----
+                                                </a>
+                    </li>
+                                <li menuItemName="Mass Payment" id="Primary_Navbar-Billing-Mass_Payment">
+                        <a href="/clientarea.php?action=masspay&all=true">
+                                                    Pago Masivo
+                                                </a>
+                    </li>
+                            </ul>
+                </li>
+        <li menuItemName="Support" class="dropdown" id="Primary_Navbar-Support">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Soporte
+                            &nbsp;<b class="caret"></b>        </a>
+                        <ul class="dropdown-menu">
+                                <li menuItemName="Tickets" id="Primary_Navbar-Support-Tickets">
+                        <a href="/supporttickets.php">
+                                                    Tickets
+                                                </a>
+                    </li>
+                                <li menuItemName="Announcements" id="Primary_Navbar-Support-Announcements">
+                        <a href="/index.php?rp=/announcements">
+                                                    Anuncios
+                                                </a>
+                    </li>
+                                <li menuItemName="Knowledgebase" id="Primary_Navbar-Support-Knowledgebase">
+                        <a href="/index.php?rp=/knowledgebase">
+                                                    Preguntas Frecuentes - FAQ
+                                                </a>
+                    </li>
+                                <li menuItemName="Downloads" id="Primary_Navbar-Support-Downloads">
+                        <a href="/index.php?rp=/download">
+                                                    Descargas
+                                                </a>
+                    </li>
+                                <li menuItemName="Network Status" id="Primary_Navbar-Support-Network_Status">
+                        <a href="/serverstatus.php">
+                                                    Estado de la Red
+                                                </a>
+                    </li>
+                            </ul>
+                </li>
+        <li menuItemName="Open Ticket" class="" id="Primary_Navbar-Open_Ticket">
+            <a href="/submitticket.php">
+                            Abrir Ticket
+                                    </a>
+                </li>
+    
+                    </ul>
+    
+                    <ul class="nav navbar-nav navbar-right">
+    
+                            <li menuItemName="Account" class="dropdown account" id="Secondary_Navbar-Account">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Hola, nadie!
+                            &nbsp;<b class="caret"></b>        </a>
+                        <ul class="dropdown-menu">
+                                <li menuItemName="Edit Account Details" id="Secondary_Navbar-Account-Edit_Account_Details">
+                        <a href="/clientarea.php?action=details">
+                                                    Editar Detalles de la Cuenta
+                                                </a>
+                    </li>
+                                <li menuItemName="Contacts/Sub-Accounts" id="Secondary_Navbar-Account-Contacts_Sub-Accounts">
+                        <a href="/clientarea.php?action=contacts">
+                                                    Contactos/Sub-Cuentas
+                                                </a>
+                    </li>
+                                <li menuItemName="Change Password" id="Secondary_Navbar-Account-Change_Password">
+                        <a href="/clientarea.php?action=changepw">
+                                                    Cambiar Contraseña
+                                                </a>
+                    </li>
+                                <li menuItemName="Email History" id="Secondary_Navbar-Account-Email_History">
+                        <a href="/clientarea.php?action=emails">
+                                                    E-Mails Recibidos
+                                                </a>
+                    </li>
+                                <li menuItemName="Divider" class="nav-divider" id="Secondary_Navbar-Account-Divider">
+                        <a href="">
+                                                    -----
+                                                </a>
+                    </li>
+                                <li menuItemName="Logout" id="Secondary_Navbar-Account-Logout">
+                        <a href="/logout.php">
+                                                    Salir
+                                                </a>
+                    </li>
+                            </ul>
+                </li>
+    
+                    </ul>
+    
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    
+    </section>
+    
+    
+    
+    <section id="main-body">
+        <div class="container">
+            <div class="row">
+    
+                                        <div class="col-md-9 pull-md-right">
+                        <div class="header-lined">
+        <h1>Cambiar Contraseña</h1>
+        <ol class="breadcrumb">
+                <li>
+                <a href="/index.php">            Administración
+                </a>        </li>
+                <li>
+                <a href="/clientarea.php">            Área del Cliente
+                </a>        </li>
+                <li>
+                <a href="/clientarea.php?action=details">            Mis Datos
+                </a>        </li>
+                <li class="active">
+                            Cambiar Contraseña
+                        </li>
+        </ol>
+    </div>
+                    </div>
+                            <div class="col-md-3 pull-md-left sidebar">
+                        <div menuItemName="My Account" class="panel panel-sidebar panel-default panel-actions">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <i class="fas fa-user"></i>&nbsp;                Mi Cuenta
+                                    <i class="fas fa-chevron-up panel-minimise pull-right"></i>
+                </h3>
+            </div>
+                                <div class="list-group">
+                                                                <a menuItemName="My Details" href="/clientarea.php?action=details" class="list-group-item" id="Primary_Sidebar-My_Account-My_Details">
+                                                                                        Mis Datos
+                            </a>
+                                                                                    <a menuItemName="Contacts/Sub-Accounts" href="/clientarea.php?action=contacts" class="list-group-item" id="Primary_Sidebar-My_Account-Contacts_Sub-Accounts">
+                                                                                        Contactos/Sub-Cuentas
+                            </a>
+                                                                                    <a menuItemName="Change Password" href="/clientarea.php?action=changepw" class="list-group-item active" id="Primary_Sidebar-My_Account-Change_Password">
+                                                                                        Cambiar Contraseña
+                            </a>
+                                                                                    <a menuItemName="Email History" href="/clientarea.php?action=emails" class="list-group-item" id="Primary_Sidebar-My_Account-Email_History">
+                                                                                        E-Mails Recibidos
+                            </a>
+                                                    </div>
+                        </div>
+                    </div>
+                    <!-- Container for main page display content -->
+            <div class="col-md-9 pull-md-right main-content">
+    
+    
+        <div class="alert alert-success text-center">
+            Cambios guardados satisfactoriamente!
+    </div>
+    
+    
+    <form class="form-horizontal using-password-strength" method="post" action="clientarea.php?action=changepw" role="form">
+    <input type="hidden" name="token" value="06ed7272c3812cc2608be02f96d6e089ab78f2de" />
+        <input type="hidden" name="submit" value="true" />
+        <div class="form-group">
+            <label for="inputExistingPassword" class="col-sm-4 control-label">Contraseña Actual</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" name="existingpw" id="inputExistingPassword" autocomplete="off" />
+            </div>
+        </div>
+        <div id="newPassword1" class="form-group has-feedback">
+            <label for="inputNewPassword1" class="col-sm-4 control-label">Nueva Contraseña</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" name="newpw" id="inputNewPassword1" autocomplete="off" />
+                <span class="form-control-feedback glyphicon"></span>
+                <br />
+    
+    <div class="progress" id="passwordStrengthBar">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <span class="sr-only">New Password Rating: 0%</span>
+        </div>
+    </div>
+    
+        <div class="alert alert-info">
+            <strong>Consejos Útiles:</strong><br />* Utilice ambos caracteres, mayúsculas y minúsculas<br />* Incluya al menos un símbolo (# $ ! % &amp; etc...)<br />* No utilice palabras del diccionario
+    </div>
+    
+    <script type="text/javascript">
+    jQuery("#inputNewPassword1").keyup(function() {
+        var pwStrengthErrorThreshold = 50;
+        var pwStrengthWarningThreshold = 75;
+    
+        var $newPassword1 = jQuery("#newPassword1");
+        var pw = jQuery("#inputNewPassword1").val();
+        var pwlength=(pw.length);
+        if(pwlength>5)pwlength=5;
+        var numnumeric=pw.replace(/[0-9]/g,"");
+        var numeric=(pw.length-numnumeric.length);
+        if(numeric>3)numeric=3;
+        var symbols=pw.replace(/\W/g,"");
+        var numsymbols=(pw.length-symbols.length);
+        if(numsymbols>3)numsymbols=3;
+        var numupper=pw.replace(/[A-Z]/g,"");
+        var upper=(pw.length-numupper.length);
+        if(upper>3)upper=3;
+        var pwstrength=((pwlength*10)-20)+(numeric*10)+(numsymbols*15)+(upper*10);
+        if (pwstrength < 0) pwstrength = 0;
+        if (pwstrength > 100) pwstrength = 100;
+    
+        $newPassword1.removeClass('has-error has-warning has-success');
+        jQuery("#inputNewPassword1").next('.form-control-feedback').removeClass('glyphicon-remove glyphicon-warning-sign glyphicon-ok');
+        jQuery("#passwordStrengthBar .progress-bar").removeClass("progress-bar-danger progress-bar-warning progress-bar-success").css("width", pwstrength + "%").attr('aria-valuenow', pwstrength);
+        jQuery("#passwordStrengthBar .progress-bar .sr-only").html('New Password Rating: ' + pwstrength + '%');
+        if (pwstrength < pwStrengthErrorThreshold) {
+            $newPassword1.addClass('has-error');
+            jQuery("#inputNewPassword1").next('.form-control-feedback').addClass('glyphicon-remove');
+            jQuery("#passwordStrengthBar .progress-bar").addClass("progress-bar-danger");
+        } else if (pwstrength < pwStrengthWarningThreshold) {
+            $newPassword1.addClass('has-warning');
+            jQuery("#inputNewPassword1").next('.form-control-feedback').addClass('glyphicon-warning-sign');
+            jQuery("#passwordStrengthBar .progress-bar").addClass("progress-bar-warning");
+        } else {
+            $newPassword1.addClass('has-success');
+            jQuery("#inputNewPassword1").next('.form-control-feedback').addClass('glyphicon-ok');
+            jQuery("#passwordStrengthBar .progress-bar").addClass("progress-bar-success");
+        }
+        validatePassword2();
+    });
+    
+    function validatePassword2() {
+        var password1 = jQuery("#inputNewPassword1").val();
+        var password2 = jQuery("#inputNewPassword2").val();
+        var $newPassword2 = jQuery("#newPassword2");
+    
+        if (password2 && password1 !== password2) {
+            $newPassword2.removeClass('has-success')
+                .addClass('has-error');
+            jQuery("#inputNewPassword2").next('.form-control-feedback').removeClass('glyphicon-ok').addClass('glyphicon-remove');
+            jQuery("#inputNewPassword2Msg").html('<p class="help-block">Las contraseñas introducidas no coinciden</p>');
+            jQuery('input[type="submit"]').attr('disabled', 'disabled');    } else {
+            if (password2) {
+                $newPassword2.removeClass('has-error')
+                    .addClass('has-success');
+                jQuery("#inputNewPassword2").next('.form-control-feedback').removeClass('glyphicon-remove').addClass('glyphicon-ok');
+                jQuery('.main-content input[type="submit"]').removeAttr('disabled');        } else {
+                $newPassword2.removeClass('has-error has-success');
+                jQuery("#inputNewPassword2").next('.form-control-feedback').removeClass('glyphicon-remove glyphicon-ok');
+            }
+            jQuery("#inputNewPassword2Msg").html('');
+        }
+    }
+    
+    jQuery(document).ready(function(){
+        jQuery('.using-password-strength input[type="submit"]').attr('disabled', 'disabled');    jQuery("#inputNewPassword2").keyup(function() {
+            validatePassword2();
+        });
+    });
+    
+    </script>
+            </div>
+        </div>
+        <div id="newPassword2" class="form-group has-feedback">
+            <label for="inputNewPassword2" class="col-sm-4 control-label">Confirmar Nueva Contraseña</label>
+            <div class="col-sm-6">
+                <input type="password" class="form-control" name="confirmpw" id="inputNewPassword2" autocomplete="off" />
+                <span class="form-control-feedback glyphicon"></span>
+                <div id="inputNewPassword2Msg"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="text-center">
+                <input class="btn btn-primary" type="submit" value="Guardar Cambios" />
+                <input class="btn btn-default" type="reset" value="Cancelar" />
+            </div>
+        </div>
+    </form>
+    
+    
+    
+                    </div><!-- /.main-content -->
+                                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="footer">
+        <div class="container">
+            <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+            <p>Copyright &copy; 2021 Gamehost. All Rights Reserved.</p>
+        </div>
+    </section>
+    
+    <div class="modal system-modal fade" id="modalAjax" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content panel panel-primary">
+                <div class="modal-header panel-heading">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title">Title</h4>
+                </div>
+                <div class="modal-body panel-body">
+                    Loading...
+                </div>
+                <div class="modal-footer panel-footer">
+                    <div class="pull-left loader">
+                        <i class="fas fa-circle-notch fa-spin"></i> Loading...
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary modal-submit">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5d7ca0779f6b7a4457e1a2e6/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    
+    
+    </body>
+    </html>
