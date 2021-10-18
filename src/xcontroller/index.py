@@ -27,9 +27,7 @@ def login(s, email, password):
     comments = comments.find('User is logged in')
     if comments == -1:
         print("Pass incorrecta")
-        print(inicio)
     else:
-        print(comments)
         print("dentrop")
 
 #username=fponcecanales%40gmail.com&
@@ -131,10 +129,10 @@ def resetwpass(s, email, password, newpassword):
 #resetwpass(s)
 #register(s)
 #login(s)
-register(s, 'capulini23@gmail.com', 'a')
+login(s, 'capulini23@gmail.com', 'a')
 
 
-# LEER UN ARCHIVO
+# # LEER UN ARCHIVO
 # file1 = open('myfile.txt', 'r')
 # Lines = file1.readlines()
 # line = []

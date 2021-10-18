@@ -1,15 +1,17 @@
 from PIL.Image import new
+from cv2 import log
 import requests
 from bs4 import BeautifulSoup
 import resolver
 import cap
 import re
 import time
+
 # ---------------------------------------------------------------------------------------------
 # # LOG IN
 
 s = requests.Session()
-def inicio(email, password):
+def inicio(s,email, password):
     payload = {'username': email, 'password': password}
     url = 'https://w3.gamehost.cl/dologin.php'
 
@@ -26,8 +28,8 @@ def inicio(email, password):
 
 # ---------------------------------------------------------------------------------------------
 
-#LEER UN ARCHIVO
-# file1 = open('prueba.txt', 'r')
+# # LEER UN ARCHIVO
+# file1 = open('myfile.txt', 'r')
 # Lines = file1.readlines()
 # line = []
 # for i in range(len(Lines)):
@@ -114,10 +116,10 @@ def register(s, email, password):
 
 
 # for i in range(len(line)):
-#     register(line[i][0],line[i][1])
+#     inicio(line[i][0],line[i][1])
 
 # print('-----------------------------------')
-register(s,'capulini23@gmail.com', 'javi26')
+inicio(s,'capulini23@gmail.com', 'javi26')
 # Restablecimiento de contrasena ( sin log in)
 
 def reset(s, email, newpass):
@@ -165,7 +167,7 @@ def reset(s, email, newpass):
 
 
 # Restablecimiento de contrasena ( CON log in) 
-def resetwl( password, newpass):
+def resetwl( s, password, newpass):
     
     
     resetUrl = 'https://w3.gamehost.cl/clientarea.php?action=changepw'

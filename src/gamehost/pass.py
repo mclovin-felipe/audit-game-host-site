@@ -11,9 +11,9 @@ def generar(email, largo):
     return p
 file1 = open('myfile.txt', 'w')
 
-for i in range(1):
+for i in range(100):
     
     
-    file1.writelines(generar('capulini123@gmail.com', 1000))
+    file1.writelines(generar('capulini123@gmail.com', 10))
 
 file1.close()
